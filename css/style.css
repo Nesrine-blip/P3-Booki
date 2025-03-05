@@ -1,0 +1,451 @@
+/*style de header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+/*logo*/
+.logo img {
+  padding: 50px 30px;
+  width: 61px;
+  height: 19px;
+}
+.navbar {
+  display: flex;
+}
+.navlist {
+  display: flex;
+
+  gap: 68px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 50px 0;
+  list-style: none;
+  font-size: 16px;
+  padding: 10px;
+}
+.navlink:hover {
+  color: #0065fc;
+}
+
+/* ==========================
+    Styles de la section Recherche
+   ========================== */
+
+.hero {
+  max-width: 1340px; /* Largeur conforme à la maquette */
+  margin: 0 auto; /* Centrage horizontal */
+  padding: 30px 50px; /* Espacement intérieur */
+}
+.hero-content {
+  margin-bottom: 35px;
+}
+
+.hero-title {
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.hero-subtitle {
+  font-size: 16px;
+}
+.search-bar-wrapper {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px;
+  max-width: 377px;
+  height: 49px;
+}
+/*icone de localisation*/
+.search-bar-icon {
+  padding: 20px 20px;
+  cursor: pointer;
+  border-radius: 15px 0 0 15px;
+  border: none;
+}
+.search-bar-button {
+  padding: 15px 16px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background-color: #0065fc;
+  font-size: 18px;
+  font-weight: bold;
+  color: #deebff;
+  cursor: pointer;
+}
+.search-bar-button :hover {
+  color: white;
+}
+.search-input {
+  font-size: 18px;
+  font-weight: bold;
+  flex-grow: 1;
+  padding: 15px 16px;
+  margin-left: 24px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: black;
+}
+/* ==========================
+    Styles de la section Filtres
+   ========================== */
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+.filters-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.filter-button {
+  display: flex;
+  align-items: center;
+  padding: 4px 19px;
+  width: 170px; /*j ai du modifié la largeur des boutons psq ca a fait un débordement*/
+  height: 42px;
+  font-size: 17px;
+  font-weight: bold;
+  border: 2px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.filters-container :hover {
+  background-color: #deebff;
+}
+.filter__icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.filters-container {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.filters-info {
+  font-size: 18px;
+  font-weight: 1340px;
+  height: 24px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+/* ==========================
+    section Hébergements à Marseille
+   ========================== */
+/* 1) Conteneur principal de la section */
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+.hebergements {
+  width: 65%;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.hebergement-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+.hebergement-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.hebergement-card {
+  background-color: white;
+  border-radius: 20px;
+  width: 250px;
+  height: 205px; /*j ai du ajouter qlq pixels un peu car c était petit*/
+  padding-bottom: 15px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+.hebergement-img {
+  width: 100%;
+  height: 124px;
+  object-fit: cover; /*pour ajuster l’image sans déformation */
+  border-radius: 20px 20px 0 0;
+}
+.hebergement-content {
+  width: 220px;
+  height: 64px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.hotel-name {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.hotel-price {
+  font-size: 14px;
+}
+.card-rating {
+  width: 81px;
+  height: 13px;
+}
+.afficher-plus {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* ==========================
+    Styles de la section Activités à Marseille
+   ========================== */
+.activites {
+  max-width: 1280px; /* Limite la largeur sans forcer un minimum */
+  margin: 0 auto; /* Centre la section */
+  padding: 30px; /* Espacement intérieur */
+}
+
+.activites-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/*  Conteneur des cartes d’activités */
+.activites-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  cursor: pointer;
+}
+
+/*  Cartes des activités */
+.activite-card {
+  width: 298px;
+  height: 439px;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.activite-img {
+  width: 100%;
+  height: 380px;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Nom des activités */
+.activite-name {
+  padding: 20px;
+  margin: 0;
+  background-color: white;
+}
+
+.footer {
+  background-color: #f2f2f2;
+}
+/* Conteneur principal de Footer */
+.footer-container {
+  max-width: 1340px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+/*  Chaque article du footer */
+.footer-article {
+  width: 30%;
+}
+/*  Titres des sections */
+.footer-article h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 30px;
+  
+}
+/*  les listes */
+.footer-article ul {
+  list-style: none; /* Supprime les puces */
+}
+/*  Style des liens */
+.footer-article ul li {
+  margin-bottom: 15px; /* Espacement entre les liens */
+}
+.footer-article ul li a {
+  font-size: 16px;
+}
+.footer-article ul li a:hover {
+  color: #0065fc; /* Couleur bleu au survol */
+}
+
+/*partie existante*/
+/****** General ***********/
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
+}
+
+.fa-solid {
+  color: var(--main-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.euro {
+  font-weight: 700;
+}
+
+.neutral-star {
+  color: var(--main-bg-color);
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+  width: 65%;
+}
+
+/****** Populaires ***********/
+.populaires {
+  width: 32%;
+}
+
+.populaires-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.populaires-cards .card {
+  display: flex;
+  margin-top: 33px;
+}
+
+.populaires-cards img {
+  width: 33%;
+  height: 136px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+  width: 67%;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+  margin: 0;
+}
+
+.populaires-cards .card-rating {
+  margin-bottom: 5px;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+  .hebergements-and-populaires {
+    flex-direction: column;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  .populaires {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .populaires-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .populaires-cards a {
+    width: 30%;
+  }
+
+  .populaires-cards .card-title {
+    font-size: 14px;
+  }
+
+  .populaires-cards .card-subtitle {
+    font-size: 13px;
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* ... */
+}
+/*partie existante*/
