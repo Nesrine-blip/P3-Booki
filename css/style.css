@@ -2,33 +2,34 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0;
+ 
+  
 }
 /*logo*/
 .logo img {
-  padding: 50px 30px;
+  padding: 25px 0; /*j ai du modifié le padding psq c etait pas conforme a la maquette*/
   width: 61px;
-  height: 19px;
 }
-.navbar {
-  display: flex;
-}
+
 .navlist {
   display: flex;
-
   gap: 68px;
   font-weight: 500;
-  line-height: 19px;
-  padding: 50px 0;
   list-style: none;
   font-size: 16px;
-  padding: 10px;
-}
-.navlink:hover {
-  color: #0065fc;
+  
 }
 
+.navlink:hover {
+  color: var(--main-color);
+}
+nav li {
+    padding-top: 20px;
+    border-top: 2px solid transparent;
+}
+ul li:hover {
+    border-color: var(--main-color);
+}
 /* ==========================
     Styles de la section Recherche
    ========================== */
@@ -36,7 +37,7 @@
 .hero {
   max-width: 1340px; /* Largeur conforme à la maquette */
   margin: 0 auto; /* Centrage horizontal */
-  padding: 30px 50px; /* Espacement intérieur */
+  padding: 0;
 }
 .hero-content {
   margin-bottom: 35px;
@@ -50,15 +51,16 @@
 .hero-subtitle {
   font-size: 16px;
 }
+
 .search-bar-wrapper {
+    max-width: 377px;
   margin-bottom: 35px;
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 15px;
-  max-width: 377px;
   height: 49px;
 }
+
 /*icone de localisation*/
 .search-bar-icon {
   padding: 20px 20px;
@@ -76,6 +78,15 @@
   color: #deebff;
   cursor: pointer;
 }
+.search-mobile {
+    display: none;
+}
+.rechercher {
+    color: white !important;
+  }
+.search-bar-icon i {
+  color: black;
+}
 .search-bar-button :hover {
   color: white;
 }
@@ -90,6 +101,10 @@
   background-color: transparent;
   color: black;
 }
+.search-input::placeholder {
+  color: black;
+}
+
 /* ==========================
     Styles de la section Filtres
    ========================== */
@@ -118,7 +133,7 @@
 .filters-container :hover {
   background-color: #deebff;
 }
-.filter__icon {
+.filter-icon {
   width: 22px;
   height: 22px;
   margin-right: 10px;
@@ -139,6 +154,20 @@
   gap: 10px;
   margin-bottom: 35px;
 }
+.filters-info i {
+  color: white;
+}
+.icon-and-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-info {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 15px;
+}
+
 /* ==========================
     section Hébergements à Marseille
    ========================== */
@@ -165,13 +194,13 @@
 .hebergement-card {
   background-color: white;
   border-radius: 20px;
-  width: 250px;
   height: 205px; /*j ai du ajouter qlq pixels un peu car c était petit*/
   padding-bottom: 15px;
   padding-left: 3px;
   padding-right: 3px;
   padding-top: 3px;
   cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .hebergement-img {
   width: 100%;
@@ -195,7 +224,7 @@
   font-size: 14px;
 }
 .card-rating {
-  width: 81px;
+  
   height: 13px;
 }
 .afficher-plus {
@@ -266,11 +295,14 @@
   font-size: 18px;
   font-weight: bold;
   margin-left: 30px;
-  
+  margin: 0;
+  margin-bottom: 15px;
 }
 /*  les listes */
 .footer-article ul {
   list-style: none; /* Supprime les puces */
+  margin: 0;
+  padding: 0;
 }
 /*  Style des liens */
 .footer-article ul li {
@@ -412,8 +444,10 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
   .hebergements-and-populaires {
     flex-direction: column;
+    
   }
 
   .hebergements {
@@ -445,7 +479,99 @@ a {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-  /* ... */
+@media (max-width: 767px) {
+    @media (max-width: 767px) {
+        .logo img {
+            padding: 30px !important;
+            width: 62px !important;
+            height: 19px !important;
+        }
+    }
+header {
+    flex-direction: column;
 }
+header .logo {
+    margin: auto;
+}
+.navlist {
+   margin: 0;
+   padding: 0;
+}
+nav ul li {
+    border-top: none;
+    border-bottom: 2px solid var(--main-bg-color);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+form {
+    width: 100%;
+}
+.search-bar-wrapper {
+    width: 100%;
+}
+.search-bar {
+    width: 100%;
+}
+.rechercher {
+    display: none;
+`}
+.search-mobile { /*la loupe*/
+    display: inline-block;
+    color: white !important;
+}
+.search-bar-button {
+    background-color: var(--main-color);
+    border-radius: 15px;
+    box-shadow: 1px  1px 3px black;
+}
+.hero-content {
+    width: 100%;
+}
+.filters-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    width: 100%;
+}
+.hebergements-and-populaires {
+    flex-direction: column-reverse;
+    border-radius: 0px;
+}
+.populaires {
+    margin: 0px;
+}
+.hebergements-and-populaires .populaires {
+    border-radius: 0px;
+  }
+.populaires-cards {
+    width: 100%;
+    display: block;
+}
+.populaires-cards .card {
+    margin-top: 15px;
+}
+.hebergements {
+    background-color: white !important;
+}
+.hebergement-container {
+    display: flex;
+    flex-direction: column;
+}
+.activites-container {
+    display: flex;
+    flex-direction: column;
+}
+.activite-card {
+    width: 100%;
+    display: block;
+}
+.footer-container {
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+    
+
 /*partie existante*/
