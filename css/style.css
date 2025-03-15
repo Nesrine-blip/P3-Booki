@@ -5,7 +5,7 @@
 }
 /*logo*/
 .logo img {
-  padding: 25px 0; /*j ai du modifié le padding psq c etait pas conforme a la maquette*/
+  padding: 30px 50px; /*j ai du modifié le padding psq c etait pas conforme a la maquette*/
   width: 61px;
 }
 
@@ -21,7 +21,7 @@
   color: var(--main-color);
 }
 nav li {
-    margin: 0 20px 0 20px;
+  margin: 0 20px 0 20px;
   border-top: 2px solid transparent;
 }
 ul li:hover {
@@ -48,60 +48,58 @@ ul li:hover {
 .hero-subtitle {
   font-size: 16px;
 }
+/*barre de navigation*/
 
 .search-bar-wrapper {
-  max-width: 377px;
-  margin-bottom: 35px;
   display: flex;
-  align-items: center;
-  gap: 24px;
-  height: 49px;
+  margin-bottom: 35px;
 }
-
-/*icone de localisation*/
-.search-bar-icon {
-  padding: 20px 20px;
-  cursor: pointer;
+.map-button {
+  padding: 15px 18px;
   border-radius: 15px 0 0 15px;
-  border: none;
-}
-.search-bar-button {
-  padding: 15px 16px;
-  border: none;
-  border-radius: 0 15px 15px 0;
-  background-color: #0065fc;
-  font-size: 18px;
-  font-weight: bold;
-  color: #deebff;
+  background-color: #f2f2f2;
+  border: 1px;
   cursor: pointer;
 }
-.search-mobile {
+.fa-solid.map-icon {
+  /*lcone de localisation*/
+  font-size: 21px;
+  color: #000;
+}
+.search-input {
+  box-sizing: border-box;
+  padding: 15px 16px 16px 15px;
+  border: 1px solid var(--Grey, #f2f2f2);
+  /*text*/
+  color: var(--Black, #000);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+}
+.search-input::placeholder {
+  color: #000;
+}
+.search-button {
+  padding: 15px 16px 16px 15px;
+  border-radius: 0px 15px 15px 0px;
+  border: 1px solid var(--Blue, #0065fc);
+  background: var(--Blue, #0065fc);
+  cursor: pointer;
+  /*texte*/
+  color: var(--White, #fff);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.loupe {
   display: none;
 }
 .rechercher {
-  color: white !important;
 }
-.search-bar-icon i {
-  color: black;
-}
-.search-bar-button :hover {
-  color: white;
-}
-.search-input {
-  font-size: 18px;
-  font-weight: bold;
-  flex-grow: 1;
-  padding: 15px 16px;
-  margin-left: 24px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: black;
-}
-.search-input::placeholder {
-  color: black;
-}
-
 /* ==========================
     Styles de la section Filtres
    ========================== */
@@ -115,15 +113,19 @@ ul li:hover {
   font-size: 18px;
   font-weight: bold;
 }
+.title-and-filters {
+  display: flex;
+  gap: 15px;
+  margin-left: 50px;
+}
 .filter-button {
   display: flex;
   align-items: center;
   padding: 4px 19px;
-  width: 170px; /*j ai du modifié la largeur des boutons psq ca a fait un débordement*/
-  height: 42px;
+  height: 50px;
   font-size: 17px;
   font-weight: bold;
-  border: 2px;
+  border: 2px solid var(--Grey-Tint2, #d9d9d9);
   border-radius: 25px;
   cursor: pointer;
 }
@@ -175,9 +177,9 @@ ul li:hover {
 }
 
 .hebergements {
-  width: 65%;
   padding: 30px;
   margin-bottom: 30px;
+  margin: 0;
 }
 .hebergement-title {
   font-size: 22px;
@@ -191,13 +193,11 @@ ul li:hover {
 .hebergement-card {
   background-color: white;
   border-radius: 20px;
-  height: 205px; /*j ai du ajouter qlq pixels un peu car c était petit*/
+  border: 5px solid var(--White, #fff);
   padding-bottom: 15px;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-top: 3px;
   cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .hebergement-img {
   width: 100%;
@@ -206,10 +206,8 @@ ul li:hover {
   border-radius: 20px 20px 0 0;
 }
 .hebergement-content {
-  width: 220px;
   height: 64px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
 }
 .hotel-name {
   margin-top: 4px;
@@ -234,6 +232,7 @@ ul li:hover {
   max-width: 1280px; /* Limite la largeur sans forcer un minimum */
   margin: 0 auto; /* Centre la section */
   padding: 30px; /* Espacement intérieur */
+  box-sizing: content-box;
 }
 
 .activites-title {
@@ -335,7 +334,7 @@ body {
 .main-container {
   width: 100%;
   max-width: 1440px;
-  padding: 0 50px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -475,9 +474,14 @@ a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .logo img {
-    padding: 30px !important;
-    width: 62px !important;
-    height: 19px !important;
+    padding: 30px;
+    width: 62px;
+    height: 19px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
   }
 
   header {
@@ -502,10 +506,7 @@ a {
     width: 100%;
     margin: 0;
   }
-
-  form,
-  .search-bar-wrapper,
-  .search-bar {
+  .search-input {
     width: 100%;
   }
 
@@ -513,20 +514,28 @@ a {
     display: none;
   }
 
-  .search-mobile {
-    /* La loupe */
+  .loupe {
     display: inline-block;
-    color: white !important;
+    color: white;
   }
 
-  .search-bar-button {
-    background-color: var(--main-color);
-    border-radius: 15px;
-    box-shadow: 1px 1px 3px black;
+  .search-button {
+    display: inline-flex;
+    height: 49px;
+    padding: 15px 16px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
   }
 
   .hero-content {
     width: 100%;
+  }
+  .filters-title {
+    width: 100%;
+  }
+  .title-and-filters {
+    flex-direction: column;
   }
 
   .filters-container {
@@ -575,9 +584,13 @@ a {
     width: 100%;
     display: block;
   }
+  .footer {
+    margin: 0;
+  }
 
   .footer-container {
     flex-direction: column;
     gap: 50px;
+    margin: 0;
   }
 }

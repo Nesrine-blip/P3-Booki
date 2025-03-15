@@ -32,8 +32,8 @@
             <!--Menu de navigation-->
             <nav class="navbar">
                 <ul class="navlist">
-                    <li class="navitem"><a class="navlink" href="§">Hébergements</a></li>
-                    <li class="navitem"><a class="navlink" href="§">Activités</a></li>
+                    <li class="navitem"><a class="navlink" href="#">Hébergements</a></li>
+                    <li class="navitem"><a class="navlink" href="#">Activités</a></li>
                 </ul>
 
             </nav>
@@ -47,14 +47,14 @@
                     <p class="hero-subtitle">En plein centre-ville ou en pleine nature </p>
                 </div>
                 <!--barre de recherche avec formulaire-->
-                <form class="search-bar" action="§" method="get">
+                <form action="#" method="get">
                     <div class="search-bar-wrapper">
-                        <button class="search-bar-icon">
-                            <i class="fa-solid fa-location-dot"></i>
+                        <button class="map-button">
+                            <i class="fa-solid fa-location-dot map-icon"></i>
                         </button>
                         <input type="text" class="search-input" name="destination" placeholder="Marseille, France">
-                        <button type="submit" class="search-bar-button">
-                            <i class="fa-solid fa-magnifying-glass search-mobile"></i>
+                        <button type="submit" class="search-button">
+                            <i class="fa-solid fa-magnifying-glass loupe"></i>
                             <span class="rechercher">Rechercher</span>
                         </button>
                     </div>
@@ -64,24 +64,27 @@
 
             <!--Section des filtres-->
             <section class="filters">
-                <h2 class="filters-title">Filtres</h2>
-                <!------------conteneur des filtres------------>
-                <div class="filters-container">
-                    <!--filtre 1-->
+                <div class="title-and-filters">
+                    <!----pour mettre aprés les filtres en dessous de titre pour la version mobile-->
+                    <h2 class="filters-title">Filtres</h2>
+                    <!------------conteneur des filtres------------>
+                    <div class="filters-container">
+                        <!--filtre 1-->
 
-                    <button class="filter-button">
-                        <i class="fa-solid fa-money-bill-wave filter-icon"></i> Économique
-                    </button>
-                    <!--filtre 2-->
-                    <button class="filter-button">
-                        <i class="fa-solid fa-person filter-icon"></i>Familial</button>
-                    <!--filtre 3-->
-                    <button class="filter-button">
-                        <i class="fa-solid fa-heart filter-icon"></i>Romantique</button>
-                    <!--filtre 4-->
-                    <button class="filter-button">
-                        <i class="fa-solid fa-fire filter-icon"></i>Nos pépites
-                    </button>
+                        <button class="filter-button">
+                            <i class="fa-solid fa-money-bill-wave filter-icon"></i> Économique
+                        </button>
+                        <!--filtre 2-->
+                        <button class="filter-button">
+                            <i class="fa-solid fa-person filter-icon"></i>Familial</button>
+                        <!--filtre 3-->
+                        <button class="filter-button">
+                            <i class="fa-solid fa-heart filter-icon"></i>Romantique</button>
+                        <!--filtre 4-->
+                        <button class="filter-button">
+                            <i class="fa-solid fa-fire filter-icon"></i>Nos pépites
+                        </button>
+                    </div>
                 </div>
             </section>
             <!------texte aprés les filtres avec l'icone-------->
@@ -121,7 +124,7 @@
                                 class="hebergement-img">
                             <div class="hebergement-content">
                                 <h3 class="hotel-name">Hotêl Chez Amina</h3>
-                                <p class="Hotel-price">Nuit à partir de 96€</p>
+                                <p class="hotel-price">Nuit à partir de 96€</p>
                                 <div class="card-rating">
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                                     <i class="fa-xs fa-solid fa-star" aria-hidden="true"></i>
@@ -207,7 +210,7 @@
                             </div>
 
                         </article>
-                        <a href="&" class="afficher-plus">Afficher plus</a>
+                        <a href="#" class="afficher-plus">Afficher plus</a>
                 </section>
                 <!------------partie existante------>
                 <section class="populaires">
