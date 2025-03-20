@@ -16,6 +16,7 @@
   font-weight: 500;
   list-style: none;
   font-size: 16px;
+  margin: 0;
 }
 
 .navlink:hover {
@@ -23,6 +24,7 @@
 }
 nav li {
   margin: 0 20px 0 20px;
+  padding: 20px 0 0 0;
   border-top: 2px solid transparent;
 }
 ul li:hover {
@@ -433,6 +435,9 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    padding: 0 50px 0 50px;
+  }
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -487,22 +492,20 @@ a {
   header {
     flex-direction: column;
   }
-  .navlist {
-    margin: 0;
-    padding: 0;
-    gap: 15px;
-    margin-bottom: 30px;
+  .navbar {
     width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 30px;
   }
-  
+  .navlist {
+    gap: 0;
+  }
+
   nav ul li {
     border-top: none;
     border-bottom: 2px solid var(--main-bg-color);
     width: 100%;
     text-align: center;
-    padding:0 35px 15px 35px;
-
+    padding: 0 35px 15px 35px;
     margin: 0;
   }
   .hero-content {
