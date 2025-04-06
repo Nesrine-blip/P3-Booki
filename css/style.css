@@ -147,7 +147,7 @@ ul li:hover {
 
 .filters-info {
   font-size: 18px;
-  font-weight: 1340px;
+  font-weight: bold;
   height: 24px;
   display: flex;
   gap: 10px;
@@ -485,7 +485,7 @@ a {
   }
   * {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: content-box;
   }
 
@@ -553,6 +553,13 @@ a {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
+  .icon-and-text {
+    display: flex;
+    align-items: center;
+  }
+  .icon-info {
+    margin-bottom: 35px;
+  }
 
   .hebergements-and-populaires {
     flex-direction: column-reverse;
@@ -593,7 +600,6 @@ a {
   }
 
   .activite-card {
-    width: 100%;
     display: block;
   }
   .footer {
@@ -604,5 +610,8 @@ a {
     flex-direction: column;
     gap: 50px;
     margin: 0;
+  }
+  body {
+    overflow-x: hidden;
   }
 }
